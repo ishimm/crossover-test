@@ -18,24 +18,23 @@
 #Documentation
 #-------------
 
-  The documentation available as of the date of this release is
-  included in .doc format in the home directory. 
+  The documentation available as of the date of this release is included in .doc format in the home directory. 
   
 #Installation
 #------------
  - A Cloud PaaS provider account should be available for deployment. This release was tested on Herouku.
- -  
+ - Clone or use provided project jar (Git repository: https://github.com/ishimm/crossover-test.git)
+ - Deploy to Herouku by running command: $ git push heroku master (if using Git)
+ 
 
 #System requirements
 #------------
 
 - A cloud PaaS (platform-as-a-service) providers such as Heroku or Cloud Foundry.
-
 - JDK 1.7 or later
-
 - Maven 3.2.1 or later
-
 - Git 2.9.2
+
 
 #Build Instructions
 #------------
@@ -45,7 +44,6 @@
       Activation Framework     http://java.sun.com/products/javabeans/jaf/index.jsp
       Mail                     http://java.sun.com/products/javamail/
       
-
 #References and acknowledgments
 #------------
 
