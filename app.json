@@ -1,0 +1,25 @@
+{
+  "name": "Air Ticket Reservation System - Crossover",
+  "description": "A Spring Boot web app hooked up to ID Site for easy authentication and SSO",
+  "repository": "https://github.com/stormpath/spring-boot-idsite-sso-demo",
+  "keywords": ["spring boot", "reservation", "air tickets", "security", "authentication"],
+  "success_url": "/",
+  "env": {
+   "STORMPATH_APPLICATION_HREF": {
+      "description": "The URL for your Stormpath Application from the Stormpath Admin Dashboard",
+      "value": "https://api.stormpath.com/v1/applications/GYqrYB19BHOvB4ooM98U1"
+    },
+    "STORMPATH_API_KEY_ID": {
+      "description": "The API key ID from your ~/.stormpath/apiKey.properties file",
+      "value": "5TI2X3RA6TC4D9OQGBI1RV96R"
+    },
+    "STORMPATH_API_KEY_SECRET": {
+      "description": "The API key secret from tyou ~/.stormpath/apiKey.properties file",
+      "value": "q4ZqpmzLl9376G01A5/jGKvZgPtZjjpJ0QDXu7zJV3A"
+    },
+    "STORMPATH_TEMPLATE_ROOT": {
+      "description": "Selector for which set of content to render - rebeloutfitterz or imperialxchange"
+      "value": "ix"
+    }
+  }
+}
