@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <th:block th:include="fragments/head :: head"/>
+</head>
+
+<body>
+
+    <th:block th:include="fragments/nav :: nav"/>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-6" id="header-text">
+            <h1><b>ATReS</b></h1>
+            <p>Air Ticket Reservation System</p>
+            <i>by Ishim Manon</i>
+          </div> 
+          <div class="5u 12u(medium)">
+				<ul>
+					<li><a href="#" class="button big icon fa-arrow-circle-right">Search flights</a></li>
+				</ul>
+			</div>
+        </div>
+      </div>
+    </header>
+
+	<div id="home-content">
+    <section id="container" class="search-controls   opaque-on-desktop">
+    <form action="#" class="clearfix">
+        <section id="js-trip-type" class="search-controls-trip-type multi-city-enabled">
+            <div class="mobile-container">
+                <input type="radio" id="js-is-return-input" name="trip-type" value="return" class="visuallyhidden" tabindex="1" ></input>
+                <label for="js-is-return-input" class="return-trip">Return</label>
+                <input type="radio" id="js-one-way-input" name="trip-type" value="oneway" class="visuallyhidden" tabindex="1" ></input>
+                <label for="js-one-way-input" class="one-way-trip">One way</label>
+                    <input type="radio" id="js-multi-city-input" name="trip-type" value="multicity" class="visuallyhidden" tabindex="1"></input>
+                    <label for="js-multi-city-input" class="multi-city-trip">Multi-city</label>
+            </div>
+        </section>
+        <section class="traditional-search clearfix">
+            <div id="js-places" class="search-controls-places clearfix">
+                <div class="origin-place">
+                    <label for="js-origin-input" class="place-label">From</label>
+                    <input type="text" id="js-origin-input" tabindex="2" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" dir="auto"></input>
+                    <label class="nearby-alts sc-checkbox">
+                        <input type="checkbox" id="js-outbound-alts" class="visuallyhidden" />
+                        Add nearby airports
+                    </label>
+                </div>
+                <button type="button" id="js-places-toggle" class="swap-button" title="Click here to swap locations">
+                    <span class="visuallyhidden">Click here to swap locations</span>
+                </button>
+                <div class="destination-place">
+                    <label for="js-destination-input" class="place-label">To</label>
+                    <input type="text" id="js-destination-input" placeholder="Enter a country, city or airport" tabindex="2" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" dir="auto"></input>
+                </div>
+            </div>
+            <div id="js-dates" class="search-controls-dates">
+                <div class="depart">
+                    <label for="js-depart-input">Depart</label>
+                    <input type="text" id="js-depart-input" tabindex="3" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" readonly=""></input>
+                </div>
+                <div class="return ">
+                    <label for="js-return-input">Return</label>
+                    <input type="text" id="js-return-input" tabindex="3" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" readonly=""></input>
+                </div>
+                <span id="js-depart-summary" class="date-summary"></span>
+                <span id="js-return-summary" class="date-summary"></span>
+            </div>
+            <label class="sc-checkbox prefer-directs">
+                <input type="checkbox" id="js-prefer-directs" class="visuallyhidden" tabindex="1"></input> Direct flights only
+            </label>
+                <button class="js-search-button wc-button-large wc-button-spinner" type="button" tabindex="1">
+                    <span class="wc-button-point" role="presentation" aria-hidden="true"></span>
+                    <span class="wc-button-text">Search flights</span>
+                </button>
+        </section>
+    </form>
+</section>
+</div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

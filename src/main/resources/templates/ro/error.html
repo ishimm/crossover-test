@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+ <head>
+    <th:block th:include="fragments/head :: head"/>
+ </head>
+ <body class="homepage">
+	<div id="page-wrapper">
+		<!-- Header -->
+		<div id="header-wrapper">
+			<header id="header" class="container">
+				<!-- Nav -->
+				<th:block th:include="fragments/nav :: nav"/>
+			</header>
+		</div>
+
+	    <!-- Header -->
+	    <header class="header">
+	      <div class="container">
+	        <div class="row">
+	          <div class="col-md-6 col-md-offset-6" id="header-text">
+	            <h1><b>ERROR!</b></h1>
+	            <p>Oops! There was an eror, please try again or contact your system administrator.</p>
+	            <p th:text="${errorAtt}" th:unless="${errorAtt == null}"></p>
+	          </div> 
+	        </div>
+	      </div>
+	    </header>
+	</div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

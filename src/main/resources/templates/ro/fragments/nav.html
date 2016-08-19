@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <div th:fragment="nav">
+        	<!-- Logo -->
+			<div id="logo">
+				<h1><a href="index.html">ATReS</a></h1>
+				<span>by Ishim Manon</span>
+			</div>
+            <nav id="nav" class="navbar navbar-inverse navbar-fixed-top">
+            	<div class="container">
+            		<!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li class="current"><a href="index.html">Home</a></li>
+							<th:block th:if="${account != null and #httpServletRequest.requestURI != '/restricted/user'}">
+                                <li><a href="/restricted/user">My ATReS</a>
+                                <ul>
+									<li><a href="#">My Reservations</a></li>
+									<li><a href="#">My Profile</a></li>
+								</ul>
+                                </li>
+                            </th:block>
+                            <th:block th:if="${account}">
+                                <li><a href="/logout">Logout</a></li>
+                            </th:block>
+                            <th:block th:unless="${account}">
+                                <li><a href="/chooseLogin">Log In</a></li>
+                            </th:block>
+						</ul>
+					</div>
+				</div>
+			</nav>
+        </div>
+    </body>
+</html>
